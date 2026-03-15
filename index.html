@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Wendigo | Research Compendium</title>
+<title>The Wendigo Research Compendium</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
 
@@ -24,8 +24,25 @@ margin:0;
 font-family:'Crimson Text',serif;
 background:linear-gradient(135deg,var(--bg1),var(--bg2));
 color:var(--text);
-line-height:1.7;
+overflow-x:hidden;
 }
+
+/* animated forest background */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+opacity:.15;
+z-index:-1;
+}
+
+/* layout */
 
 .container{
 max-width:1000px;
@@ -43,24 +60,26 @@ h1{
 font-family:'Cinzel',serif;
 font-size:3rem;
 color:var(--accent);
-letter-spacing:3px;
+letter-spacing:4px;
 }
 
 .subtitle{
 opacity:.7;
 }
 
+/* navigation */
+
 .nav{
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
 margin:30px 0;
 }
 
 .nav a{
-color:white;
 text-decoration:none;
+color:white;
 font-family:'Cinzel';
 opacity:.8;
 }
@@ -69,18 +88,22 @@ opacity:.8;
 color:var(--accent);
 }
 
+/* section */
+
 .section{
 margin:40px 0;
 padding:25px;
-background:rgba(0,0,0,.3);
+background:rgba(0,0,0,.45);
 border-left:4px solid #7f1d1d;
 border-radius:6px;
 }
 
 .section h2{
-color:var(--accent);
 font-family:'Cinzel';
+color:var(--accent);
 }
+
+/* ascii diagram */
 
 .diagram{
 background:black;
@@ -92,62 +115,12 @@ border-radius:6px;
 margin-top:20px;
 }
 
-.btn{
-background:#7f1d1d;
-border:none;
-color:white;
-padding:10px 16px;
-border-radius:6px;
-cursor:pointer;
-margin:5px;
-}
-
-.btn:hover{
-background:#dc2626;
-}
-
-.controls{
-position:fixed;
-top:20px;
-left:20px;
-}
-
-.github{
-position:fixed;
-top:20px;
-right:20px;
-background:#24292e;
-padding:10px 15px;
-border-radius:6px;
-color:white;
-text-decoration:none;
-}
-
-footer{
-text-align:center;
-margin-top:60px;
-opacity:.6;
-font-size:.9rem;
-}
-
-.scroll{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#7f1d1d;
-width:45px;
-height:45px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-}
+/* collapsible */
 
 .collapsible{
 background:#111;
-margin-top:10px;
 border-radius:6px;
+margin-top:10px;
 }
 
 .collapsible-header{
@@ -168,6 +141,95 @@ padding:0 15px;
 max-height:400px;
 padding:15px;
 }
+
+/* buttons */
+
+.btn{
+background:#7f1d1d;
+border:none;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+margin:5px;
+}
+
+.btn:hover{
+background:#dc2626;
+}
+
+/* controls */
+
+.controls{
+position:fixed;
+top:20px;
+left:20px;
+z-index:1000;
+}
+
+/* github badge */
+
+.github{
+position:fixed;
+top:20px;
+right:20px;
+background:#24292e;
+padding:10px 15px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+z-index:1000;
+}
+
+/* glowing eyes */
+
+.eyes{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:20px 0;
+}
+
+.eye{
+width:12px;
+height:12px;
+background:#22ff00;
+border-radius:50%;
+box-shadow:0 0 20px #22ff00;
+animation:blink 4s infinite;
+}
+
+@keyframes blink{
+0%,90%,100%{opacity:1}
+95%{opacity:0}
+}
+
+/* scroll button */
+
+.scroll{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#7f1d1d;
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+/* footer */
+
+footer{
+text-align:center;
+margin-top:60px;
+opacity:.6;
+font-size:.9rem;
+}
+
+/* mobile */
 
 @media(max-width:600px){
 
@@ -195,7 +257,15 @@ font-size:2rem;
 <header>
 
 <h1>THE WENDIGO</h1>
-<p class="subtitle">Spirit of Hunger • Keeper of the Northern Woods</p>
+
+<div class="eyes">
+<div class="eye"></div>
+<div class="eye"></div>
+</div>
+
+<p class="subtitle">
+Spirit of Hunger • Keeper of the Northern Woods
+</p>
 
 </header>
 
@@ -214,7 +284,7 @@ font-size:2rem;
 <h2>Introduction</h2>
 
 <p>
-The Wendigo is a legendary creature from the folklore of Algonquian-speaking peoples. It symbolizes insatiable hunger, greed, and spiritual corruption. Stories describe the Wendigo as a towering skeletal being that roams the cold northern forests.
+The Wendigo is a creature from Algonquian folklore representing insatiable hunger and spiritual corruption. Stories describe a tall skeletal monster that stalks the frozen forests of North America.
 </p>
 
 </section>
@@ -225,17 +295,17 @@ The Wendigo is a legendary creature from the folklore of Algonquian-speaking peo
 
 <div class="diagram">
 
-      ☠ SKULL
-     /      \
-   (  ◉  ◉   )
-      \__/     
-       ||
-     /----\
-    /|    |\
-   / |    | \
-     |    |
-     |    |
-    /      \
+        ☠ SKULL
+       /      \
+     (  ◉  ◉   )
+        \__/     
+         ||
+       /----\
+      /|    |\
+     / |    | \
+       |    |
+       |    |
+      /      \
 
 </div>
 
@@ -246,7 +316,7 @@ The Wendigo is a legendary creature from the folklore of Algonquian-speaking peo
 <h2>Historical Origins</h2>
 
 <p>
-The Wendigo legend originates from Indigenous cultures including the Ojibwe, Cree, and Algonquin peoples. Stories often warned communities against cannibalism during extreme winter starvation.
+The legend comes from Indigenous cultures including the Ojibwe, Cree, and Algonquin peoples. The stories warned against greed and cannibalism during harsh winters.
 </p>
 
 </section>
@@ -262,7 +332,7 @@ The Wendigo legend originates from Indigenous cultures including the Ojibwe, Cre
 <div class="collapsible-content">
 
 <p>
-In many stories, a human becomes a Wendigo after committing cannibalism or being possessed by a Wendigo spirit. The transformation represents a loss of humanity and moral corruption.
+A human may become a Wendigo through cannibalism or spiritual possession. The transformation represents the loss of humanity.
 </p>
 
 </div>
@@ -276,7 +346,7 @@ In many stories, a human becomes a Wendigo after committing cannibalism or being
 <div class="collapsible-content">
 
 <p>
-The Wendigo is said to possess supernatural strength, speed, and the ability to survive extreme cold.
+The Wendigo is said to possess supernatural speed, strength, and endless hunger.
 </p>
 
 </div>
@@ -290,14 +360,16 @@ The Wendigo is said to possess supernatural strength, speed, and the ability to 
 <h2>Modern Cultural Impact</h2>
 
 <p>
-The Wendigo appears in films, literature, and video games. However, for many Indigenous communities the legend remains a powerful moral teaching rather than simply a horror monster.
+The Wendigo appears in films, literature, and games. However, for Indigenous communities it remains a powerful moral teaching rather than simply a horror monster.
 </p>
 
 </section>
 
 <footer>
 
-<p>Wendigo Research Project • Hosted on GitHub Pages</p>
+<p>Wendigo Research Project • Hosted with GitHub Pages</p>
+
+<p>Visitors: <span id="counter"></span></p>
 
 </footer>
 
@@ -309,27 +381,44 @@ The Wendigo appears in films, literature, and video games. However, for many Ind
 
 <script>
 
+/* theme */
+
 function toggleTheme(){
 
-if(document.body.style.background.includes("white")){
+if(document.body.style.background=="white"){
+
 document.body.style.background="linear-gradient(135deg,#0f172a,#020617)"
 document.body.style.color="white"
+
 }else{
+
 document.body.style.background="white"
 document.body.style.color="black"
+
 }
 
 }
+
+/* collapsible */
 
 document.querySelectorAll(".collapsible-header").forEach(header=>{
 
 header.onclick=()=>{
+
 header.parentElement.classList.toggle("active")
+
 }
 
 })
 
+/* visitor counter */
+
+let views=localStorage.getItem("views")||0
+views++
+localStorage.setItem("views",views)
+document.getElementById("counter").innerText=views
+
 </script>
 
 </body>
-</html>
+      </html>
