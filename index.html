@@ -1,610 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive research on the Wendigo - Algonquian folklore, psychology, and cultural impact">
-    <meta name="keywords" content="Wendigo, folklore, Algonquian, mythology, cryptozoology, indigenous studies">
-    <meta name="author" content="Research Compendium">
-    <meta property="og:title" content="The Wendigo: A Comprehensive Research Compendium">
-    <meta property="og:description" content="Detailed research on Wendigo folklore with diagrams, history, and cultural analysis">
-    <meta property="og:type" content="website">
-    <title>The Wendigo | Research Compendium</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #1a1a2e;
-            --bg-secondary: #16213e;
-            --bg-tertiary: #0f3460;
-            --accent-red: #dc143c;
-            --accent-dark: #8b0000;
-            --text-primary: #e8e8e8;
-            --text-secondary: #888;
-            --border: #333;
-        }
-        
-        .light-mode {
-            --bg-primary: #f5f5f5;
-            --bg-secondary: #ffffff;
-            --bg-tertiary: #e0e0e0;
-            --text-primary: #1a1a2e;
-            --text-secondary: #555;
-            --border: #ccc;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        
-        body {
-            font-family: 'Crimson Text', Georgia, serif;
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
-            color: var(--text-primary);
-            line-height: 1.8;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: rgba(26, 26, 46, 0.9);
-            box-shadow: 0 0 100px rgba(0,0,0,0.5);
-        }
-        
-        .light-mode .container {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 50px rgba(0,0,0,0.1);
-        }
-        
-        /* GitHub Badge */
-        .github-badge {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #24292e;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 6px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 0.85em;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        
-        .github-badge:hover {
-            background: #2f363d;
-            transform: translateY(-2px);
-        }
-        
-        /* Controls */
-        .controls {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 1000;
-        }
-        
-        .btn {
-            background: var(--accent-dark);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-family: 'Cinzel', serif;
-            font-size: 0.9em;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background: var(--accent-red);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220,20,60,0.4);
-        }
-        
-        /* Header */
-        header {
-            text-align: center;
-            padding: 80px 20px 60px;
-            background: linear-gradient(180deg, rgba(139,0,0,0.3) 0%, transparent 100%);
-            border-bottom: 3px solid var(--accent-dark);
-            margin-bottom: 40px;
-            position: relative;
-        }
-        
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            background: rgba(139,0,0,0.2);
-            border: 1px solid var(--accent-red);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-family: 'Cinzel', serif;
-            color: var(--accent-red);
-        }
-        
-        h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5em;
-            color: var(--accent-red);
-            text-shadow: 0 0 20px rgba(220,20,60,0.5);
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-            animation: flicker 4s infinite;
-        }
-        
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.95; }
-            52% { opacity: 0.8; }
-            54% { opacity: 0.95; }
-        }
-        
-        .subtitle {
-            font-family: 'Amatic SC', cursive;
-            font-size: 1.8em;
-            color: var(--text-secondary);
-            letter-spacing: 2px;
-        }
-        
-        /* Navigation */
-        .nav-menu {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-            padding: 0 20px;
-        }
-        
-        .nav-item {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: 'Cinzel', serif;
-            font-size: 0.9em;
-            padding: 5px 10px;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-        }
-        
-        .nav-item:hover {
-            color: var(--accent-red);
-            border-bottom-color: var(--accent-red);
-        }
-        
-        /* Sections */
-        .section {
-            margin: 50px 0;
-            padding: 30px;
-            background: rgba(0,0,0,0.2);
-            border-left: 4px solid var(--accent-dark);
-            border-radius: 0 10px 10px 0;
-            scroll-margin-top: 100px;
-        }
-        
-        .light-mode .section {
-            background: rgba(0,0,0,0.05);
-        }
-        
-        h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--accent-red);
-            font-size: 2em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        h2::before {
-            content: "◆";
-            color: var(--accent-dark);
-        }
-        
-        h3 {
-            font-family: 'Cinzel', serif;
-            color: #b22222;
-            font-size: 1.4em;
-            margin: 25px 0 15px 0;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 1.1em;
-        }
-        
-        /* Diagrams */
-        .diagram-container {
-            background: #0a0a0a;
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 30px 0;
-            text-align: center;
-            overflow-x: auto;
-        }
-        
-        .light-mode .diagram-container {
-            background: #f0f0f0;
-        }
-        
-        .diagram-title {
-            font-family: 'Cinzel', serif;
-            color: var(--accent-red);
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .sketch {
-            font-family: 'Courier New', monospace;
-            white-space: pre;
-            color: #888;
-            line-height: 1.2;
-            font-size: 0.85em;
-            background: #050505;
-            padding: 20px;
-            border-radius: 5px;
-            overflow-x: auto;
-            text-align: left;
-        }
-        
-        .light-mode .sketch {
-            color: #555;
-            background: #e8e8e8;
-        }
-        
-        /* Grid & Tables */
-        .anatomy-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        @media (max-width: 600px) {
-            .anatomy-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .anatomy-item {
-            background: rgba(139,0,0,0.1);
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid var(--border);
-        }
-        
-        .anatomy-label {
-            color: var(--accent-red);
-            font-weight: bold;
-            font-family: 'Cinzel', serif;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: rgba(0,0,0,0.3);
-        }
-        
-        .light-mode .comparison-table {
-            background: rgba(0,0,0,0.05);
-        }
-        
-        .comparison-table th {
-            background: var(--accent-dark);
-            color: white;
-            padding: 12px;
-            font-family: 'Cinzel', serif;
-            text-align: left;
-        }
-        
-        .comparison-table td {
-            padding: 12px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .comparison-table tr:hover {
-            background: rgba(139,0,0,0.1);
-        }
-        
-        /* Special Boxes */
-        .quote-box {
-            background: linear-gradient(90deg, rgba(139,0,0,0.2) 0%, transparent 100%);
-            border-left: 4px solid var(--accent-red);
-            padding: 20px;
-            margin: 25px 0;
-            font-style: italic;
-            color: var(--text-secondary);
-        }
-        
-        .warning-box {
-            background: rgba(139,0,0,0.15);
-            border: 2px dashed var(--accent-dark);
-            padding: 20px;
-            margin: 25px 0;
-            text-align: center;
-        }
-        
-        .warning-box::before {
-            content: "⚠ ";
-            color: var(--accent-red);
-            font-size: 1.5em;
-        }
-        
-        .info-box {
-            background: rgba(0,100,200,0.1);
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            margin: 20px 0;
-        }
-        
-        .timeline::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--accent-red) 0%, var(--accent-dark) 100%);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 25px;
-            padding-left: 20px;
-        }
-        
-        .timeline-item::before {
-            content: "●";
-            position: absolute;
-            left: -34px;
-            color: var(--accent-red);
-            font-size: 1.2em;
-        }
-        
-        .timeline-date {
-            color: var(--accent-red);
-            font-weight: bold;
-            font-family: 'Cinzel', serif;
-        }
-        
-        /* Interactive Elements */
-        .collapsible {
-            background: rgba(139,0,0,0.1);
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            margin: 10px 0;
-            overflow: hidden;
-        }
-        
-        .collapsible-header {
-            background: rgba(139,0,0,0.2);
-            padding: 15px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Cinzel', serif;
-            color: var(--accent-red);
-        }
-        
-        .collapsible-content {
-            padding: 0 15px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
-        }
-        
-        .collapsible.active .collapsible-content {
-            padding: 15px;
-            max-height: 1000px;
-        }
-        
-        .collapsible-icon {
-            transition: transform 0.3s;
-        }
-        
-        .collapsible.active .collapsible-icon {
-            transform: rotate(180deg);
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 2px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.9em;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent-red);
-        }
-        
-        /* Scroll to top */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--accent-dark);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s, transform 0.3s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        
-        .scroll-top.visible {
-            opacity: 1;
-        }
-        
-        .scroll-top:hover {
-            transform: translateY(-5px);
-            background: var(--accent-red);
-        }
-        
-        /* Print styles */
-        @media print {
-            .controls, .github-badge, .scroll-top, .nav-menu {
-                display: none !important;
-            }
-            .section {
-                page-break-inside: avoid;
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            .controls {
-                position: relative;
-                top: 0;
-                left: 0;
-                justify-content: center;
-                margin: 20px;
-            }
-            .github-badge {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin: 20px auto;
-                width: fit-content;
-            }
-        }
-    </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Wendigo | Research Compendium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg1:#0f172a;
+--bg2:#020617;
+--accent:#dc2626;
+--text:#e5e7eb;
+}
+
+body{
+margin:0;
+font-family:'Crimson Text',serif;
+background:linear-gradient(135deg,var(--bg1),var(--bg2));
+color:var(--text);
+line-height:1.7;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+border-bottom:2px solid #7f1d1d;
+}
+
+h1{
+font-family:'Cinzel',serif;
+font-size:3rem;
+color:var(--accent);
+letter-spacing:3px;
+}
+
+.subtitle{
+opacity:.7;
+}
+
+.nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin:30px 0;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+font-family:'Cinzel';
+opacity:.8;
+}
+
+.nav a:hover{
+color:var(--accent);
+}
+
+.section{
+margin:40px 0;
+padding:25px;
+background:rgba(0,0,0,.3);
+border-left:4px solid #7f1d1d;
+border-radius:6px;
+}
+
+.section h2{
+color:var(--accent);
+font-family:'Cinzel';
+}
+
+.diagram{
+background:black;
+padding:20px;
+font-family:monospace;
+white-space:pre;
+overflow:auto;
+border-radius:6px;
+margin-top:20px;
+}
+
+.btn{
+background:#7f1d1d;
+border:none;
+color:white;
+padding:10px 16px;
+border-radius:6px;
+cursor:pointer;
+margin:5px;
+}
+
+.btn:hover{
+background:#dc2626;
+}
+
+.controls{
+position:fixed;
+top:20px;
+left:20px;
+}
+
+.github{
+position:fixed;
+top:20px;
+right:20px;
+background:#24292e;
+padding:10px 15px;
+border-radius:6px;
+color:white;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+margin-top:60px;
+opacity:.6;
+font-size:.9rem;
+}
+
+.scroll{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#7f1d1d;
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+.collapsible{
+background:#111;
+margin-top:10px;
+border-radius:6px;
+}
+
+.collapsible-header{
+padding:15px;
+cursor:pointer;
+font-family:'Cinzel';
+color:#dc2626;
+}
+
+.collapsible-content{
+max-height:0;
+overflow:hidden;
+transition:.3s;
+padding:0 15px;
+}
+
+.active .collapsible-content{
+max-height:400px;
+padding:15px;
+}
+
+@media(max-width:600px){
+
+h1{
+font-size:2rem;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- GitHub Badge -->
-    <a href="https://github.com/yourusername/wendigo-research" class="github-badge" target="_blank">
-        <svg height="20" width="20" viewBox="0 0 16 16" fill="white">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-        Star on GitHub
-    </a>
-    
-    <!-- Controls -->
-    <div class="controls">
-        <button class="btn" onclick="toggleTheme()">🌓 Theme</button>
-        <button class="btn" onclick="window.print()">📄 PDF</button>
-        <a href="https://github.com/yourusername/wendigo-research/fork" class="btn" target="_blank">🔀 Fork</a>
-    </div>
-    
-    <div class="container">
-        <header>
-            <div class="badge-container">
-                <span class="badge">🔬 Research</span>
-                <span class="badge">📚 Folklore</span>
-                <span class="badge">🎨 Interactive</span>
-                <span class="badge">⚡ GitHub Pages</span>
-            </div>
-            <h1>THE WENDIGO</h1>
-            <div class="subtitle">Spirit of Hunger • Keeper of the Northern Woods • The Ever-Starving</div>
-        </header>
-        
-        <nav class="nav-menu">
-            <a href="#intro" class="nav-item">Introduction</a>
-            <a href="#anatomy" class="nav-item">Anatomy</a>
-            <a href="#history" class="nav-item">History</a>
-            <a href="#transformation" class="nav-item">Transformation</a>
-            <a href="#mythology" class="nav-item">Mythology</a>
-            <a href="#behavior" class="nav-item">Behavior</a>
-            <a href="#protection" class="nav-item">Protection</a>
-            <a href="#modern" class="nav-item">Modern Impact</a>
-        </nav>
 
-        <div class="section" id="intro">
-            <h2>Introduction</h2>
-            <p>The Wendigo stands as one of the most terrifying and psychologically complex figures in North American folklore. Unlike the mindless monsters of European tradition, the Wendigo represents a profound spiritual warning—a cautionary tale about the fragility of human morality when faced with the harsh realities of survival.</p>
-            
-            <p>Originating from the Algonquian-speaking peoples of the Great Lakes region and northeastern forests, this creature embodies the transformation that occurs when human hunger transcends physical need and becomes spiritual corruption. The Wendigo is not merely a beast to be feared; it is a mirror reflecting humanity's darkest potential.</p>
-            
-            <div class="info-box">
-                <strong>📌 Quick Facts:</strong> The Wendigo is known by many names across different tribes: Wiindigoo (Ojibwe), Witiko (Cree), Atcen (Lenape), and others. Each variation carries unique cultural nuances while sharing core characteristics.
-            </div>
-            
-            <div class="warning-box">
-                <strong>Reader Advisory:</strong> The following content explores themes of cannibalism, starvation, and psychological horror that may disturb sensitive readers.
-            </div>
-        </div>
+<a class="github" href="https://github.com/smoothiepie07-cloud/wendigo-research">⭐ GitHub</a>
 
-        <div class="section" id="anatomy">
-            <h2>Visual Anatomy & Physiology</h2>
-            
-            <div class="diagram-container">
-                <div class="diagram-title">Figure 1: The Wendigo - Frontal Aspect</div>
-                <div class="sketch">
-        ╭────────────────────────────────────╮
-        │           ☠️ SKULL ☠️              │
-        │         ╭──────────╮               │
-        │        ╱   ◉  ◉   ╲    ← Glowing   │
-        │       │  ◉────◉   │      eyes     │
-        │       │   ╲  ╱    │   (faint      │
-        │        ╲   ╲╱    ╱     green)    │
-        │         ╲________╱                 │
-        │         │  ╲  ╱  │                 │
-        │         │   ╲╱   │    ← Lipless   │
-        │         │   ██   │      mouth     │
-        │         │  ████  │    (permanent  │
-        │         │ ██████ │      scream)   │
-        │          ╲______╱                  │
-        │              ││                     │
-        │         ╭──┴┴──╮                  │
-        │        ╱   ██   ╲   ← Skeletal    │
-        │       │   ████
+<div class="controls">
+<button class="btn" onclick="toggleTheme()">Theme</button>
+<button class="btn" onclick="window.print()">PDF</button>
+</div>
+
+<div class="container">
+
+<header>
+
+<h1>THE WENDIGO</h1>
+<p class="subtitle">Spirit of Hunger • Keeper of the Northern Woods</p>
+
+</header>
+
+<nav class="nav">
+
+<a href="#intro">Introduction</a>
+<a href="#anatomy">Anatomy</a>
+<a href="#history">History</a>
+<a href="#myth">Mythology</a>
+<a href="#modern">Modern Impact</a>
+
+</nav>
+
+<section class="section" id="intro">
+
+<h2>Introduction</h2>
+
+<p>
+The Wendigo is a legendary creature from the folklore of Algonquian-speaking peoples. It symbolizes insatiable hunger, greed, and spiritual corruption. Stories describe the Wendigo as a towering skeletal being that roams the cold northern forests.
+</p>
+
+</section>
+
+<section class="section" id="anatomy">
+
+<h2>Visual Anatomy</h2>
+
+<div class="diagram">
+
+      ☠ SKULL
+     /      \
+   (  ◉  ◉   )
+      \__/     
+       ||
+     /----\
+    /|    |\
+   / |    | \
+     |    |
+     |    |
+    /      \
+
+</div>
+
+</section>
+
+<section class="section" id="history">
+
+<h2>Historical Origins</h2>
+
+<p>
+The Wendigo legend originates from Indigenous cultures including the Ojibwe, Cree, and Algonquin peoples. Stories often warned communities against cannibalism during extreme winter starvation.
+</p>
+
+</section>
+
+<section class="section" id="myth">
+
+<h2>Mythology</h2>
+
+<div class="collapsible">
+
+<div class="collapsible-header">Transformation Process</div>
+
+<div class="collapsible-content">
+
+<p>
+In many stories, a human becomes a Wendigo after committing cannibalism or being possessed by a Wendigo spirit. The transformation represents a loss of humanity and moral corruption.
+</p>
+
+</div>
+
+</div>
+
+<div class="collapsible">
+
+<div class="collapsible-header">Powers</div>
+
+<div class="collapsible-content">
+
+<p>
+The Wendigo is said to possess supernatural strength, speed, and the ability to survive extreme cold.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="modern">
+
+<h2>Modern Cultural Impact</h2>
+
+<p>
+The Wendigo appears in films, literature, and video games. However, for many Indigenous communities the legend remains a powerful moral teaching rather than simply a horror monster.
+</p>
+
+</section>
+
+<footer>
+
+<p>Wendigo Research Project • Hosted on GitHub Pages</p>
+
+</footer>
+
+</div>
+
+<div class="scroll" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</div>
+
+<script>
+
+function toggleTheme(){
+
+if(document.body.style.background.includes("white")){
+document.body.style.background="linear-gradient(135deg,#0f172a,#020617)"
+document.body.style.color="white"
+}else{
+document.body.style.background="white"
+document.body.style.color="black"
+}
+
+}
+
+document.querySelectorAll(".collapsible-header").forEach(header=>{
+
+header.onclick=()=>{
+header.parentElement.classList.toggle("active")
+}
+
+})
+
+</script>
+
+</body>
+</html>
